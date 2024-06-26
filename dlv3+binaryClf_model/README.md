@@ -70,7 +70,7 @@ pip install -r requirements.txt
 ```
 
 
-### 2. Download eMARG and extract it likewise Cityscapes dataset in this format 'datasets/data/cityscapes'
+### 2. Download eMARG and extract it likewise Cityscapes dataset in this format 'datasets/data/eMARG'
 
 ```
 /datasets
