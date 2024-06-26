@@ -57,8 +57,11 @@ validation: 512x384
 #### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
 <div>
-<img src="samples/city_1_target.png"   width="45%">
-<img src="samples/city_1_overlay.png"  width="45%">
+<img src="![PE-KL-36376-38_1_leftImg8bit_image](https://github.com/shubhampundhir/eMARG_iiitd/assets/56575094/b22774b5-1516-48b0-96bd-a551de52687c)
+"   width="45%">
+
+<img src="![PE-KL-36376-38_1_leftImg8bit_overlay](https://github.com/shubhampundhir/eMARG_iiitd/assets/56575094/62b0d75f-a3a4-4f06-b3fe-7f8e3cbd348d)
+"  width="45%">
 </div>
 
 <div>
@@ -88,7 +91,7 @@ pip install -r requirements.txt
 ### 3. Train your model on eMARG likewise Cityscapes.
 
 ```bash
-python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/cityscapes 
+python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/eMARG 
 ```
 
 #### 4. Testing
@@ -104,4 +107,4 @@ python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --g
 [1] [Rethinking Atrous Convolution for Semantic Image Segmentation](https://arxiv.org/abs/1706.05587)
 
 [2] [Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation](https://arxiv.org/abs/1802.02611)
-# DeeplabV3plus_Emarg15k
+
