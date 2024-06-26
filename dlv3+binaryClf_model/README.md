@@ -22,7 +22,7 @@ Specify the model architecture with '--model ARCH_NAME' and set the output strid
 |deeplabv3_hrnetv2_48 | deeplabv3plus_hrnetv2_48 |
 |deeplabv3_hrnetv2_32 | deeplabv3plus_hrnetv2_32 |
 
-### All pretrained model checkpoints: [Drive](https://drive.google.com/file/d/1G5hRKOnwDCcLVnX-Sgnxz4bzsndWNxKV/view?usp=drive_link)
+### All pretrained model checkpoints: [Drive](https://drive.google.com/drive/folders/1jA0iS7hq-AmFBtSn0Ne9DvIxcXCQBQGG?usp=drive_link)
 
 ### 2. Load the pretrained model:
 ```python
