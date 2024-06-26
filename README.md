@@ -61,21 +61,21 @@ validation: 512x384
 #### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <figure style="margin: 0 10px;">
-    <img src="images/PE-GJ-28373-84_2_leftImg8bit_image.png" alt="Image" style="width: 100%;" />
-    <figcaption style="text-align: center;">Image</figcaption>
+  <figure style="margin: 0 10px; text-align: center;">
+    <img src="images/PE-GJ-28373-84_2_leftImg8bit_image.png" alt="Image" style="width: 50px;" />
+    <figcaption>Image</figcaption>
   </figure>
-  <figure style="margin: 0 10px;">
-    <img src="images/PE-GJ-28373-84_2_leftImg8bit_overlay.png" alt="Overlay" style="width: 100%;" />
-    <figcaption style="text-align: center;">Overlay</figcaption>
+  <figure style="margin: 0 10px; text-align: center;">
+    <img src="images/PE-GJ-28373-84_2_leftImg8bit_overlay.png" alt="Overlay" style="width: 50px;" />
+    <figcaption>Overlay</figcaption>
   </figure>
-  <figure style="margin: 0 10px;">
-    <img src="images/PE-GJ-28373-84_2_leftImg8bit_pred.png" alt="Prediction" style="width: 100%;" />
-    <figcaption style="text-align: center;">Prediction</figcaption>
+  <figure style="margin: 0 10px; text-align: center;">
+    <img src="images/PE-GJ-28373-84_2_leftImg8bit_pred.png" alt="Prediction" style="width: 50px;" />
+    <figcaption>Prediction</figcaption>
   </figure>
-  <figure style="margin: 0 10px;">
-    <img src="images/PE-GJ-28373-84_2_leftImg8bit_target.png" alt="Target" style="width: 100%;" />
-    <figcaption style="text-align: center;">Target</figcaption>
+  <figure style="margin: 0 10px; text-align: center;">
+    <img src="images/PE-GJ-28373-84_2_leftImg8bit_target.png" alt="Target" style="width: 50px;" />
+    <figcaption>Target</figcaption>
   </figure>
 </div>
 
