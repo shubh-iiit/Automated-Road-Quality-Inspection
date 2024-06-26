@@ -69,7 +69,7 @@ validation: 512x384
 </p>
 
 ## II. Image Classification
-We have used Segmentation Backbone of DeepLabv3+ model pre-trained on eMARG-15k(Good/Bad) and extended it for Binary Classification by adding simple Conv + FC layer combination layers. 
+We have used Segmentation Backbone of DeepLabv3+ model pre-trained on eMARG-15k(Good/Bad) and extended it for Binary Classification by adding simple Conv + FC layer combination. 
 
 ## Quick Start 
 ## Architecture of DeeplabV3+ Fine-tuned for Binary Classification.
