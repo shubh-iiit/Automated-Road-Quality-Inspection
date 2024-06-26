@@ -62,7 +62,15 @@ validation: 512x384
 | DeepLabV3Plus-MobileNet   | 4      |  0.558     |  0.896   |  0.694  |  0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
 | DeepLabV3Plus-ResNet101   | 4      |  0.600   |  0.854   |  0.741  | 0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
 
-#### GradCAM Results on eMARG (DeepLabv3Plus-MobileNet/ResNet-101)
+## GradCAM Results on eMARG (DeepLabv3Plus-MobileNet/ResNet-101)
+
+<p float="left">
+  <img src="gradcam_results/PE-GJ-84921-20_2.jpg" alt="Image" width="300" />
+  <img src="dlv3+binaryClf_model/gradcam_results/PE-GJ-84921-20_2_overlay.jpg" width="300" /> 
+  <img src="gradcam_results/PE-GJ-85702-59_2.jpg" width="300" />
+  <img src="gradcam_results/PE-GJ-85702-59_2_overlay.jpg" width="300" />
+  
+</p>
 
 
 
