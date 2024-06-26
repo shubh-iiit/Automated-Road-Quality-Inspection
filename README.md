@@ -58,7 +58,7 @@ validation: 512x384
 | DeepLabV3Plus-ResNet101   | 4      |  0.600   |  0.854   |  0.741  | 0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
 
 
-#### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
+### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
   <figure style="margin: 0 10px; text-align: center;">
