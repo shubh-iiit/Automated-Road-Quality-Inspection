@@ -22,9 +22,7 @@ Specify the model architecture with '--model ARCH_NAME' and set the output strid
 |deeplabv3_hrnetv2_48 | deeplabv3plus_hrnetv2_48 |
 |deeplabv3_hrnetv2_32 | deeplabv3plus_hrnetv2_32 |
 
-All pretrained models: [Dropbox](https://www.dropbox.com/sh/w3z9z8lqpi8b2w7/AAB0vkl4F5vy6HdIhmRCTKHSa?dl=0), [Tencent Weiyun](https://share.weiyun.com/qqx78Pv5)
-
-Note: The HRNet backbone was contributed by @timothylimyl. A pre-trained backbone is available at [google drive](https://drive.google.com/file/d/1NxCK7Zgn5PmeS7W1jYLt5J9E0RRZ2oyF/view?usp=sharing).
+### All pretrained model checkpoints: [Drive](https://drive.google.com/file/d/1G5hRKOnwDCcLVnX-Sgnxz4bzsndWNxKV/view?usp=drive_link)
 
 ### 2. Load the pretrained model:
 ```python
@@ -39,60 +37,68 @@ colorized_preds = val_dst.decode_target(preds).astype('uint8') # To RGB images, 
 colorized_preds = Image.fromarray(colorized_preds[0]) # to PIL Image
 ```
 
-### 4. Atrous Separable Convolution
 
-**Note**: pre-trained models in this repo **do not** use Seperable Conv.
-
-Atrous Separable Convolution is supported in this repo. We provide a simple tool ``network.convert_to_separable_conv`` to convert ``nn.Conv2d`` to ``AtrousSeparableConvolution``. **Please run main.py with '--separable_conv' if it is required**. See 'main.py' and 'network/_deeplab.py' for more details. 
-
-### 5. Prediction
+### 4. Prediction
 Single image:
 ```bash
-python predict.py --input datasets/data/cityscapes/leftImg8bit/train/bremen/bremen_000000_000019_leftImg8bit.png  --dataset cityscapes --model deeplabv3plus_mobilenet --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --save_val_results_to test_results
+python predict.py --input datasets/data/eMARG/leftImg8bit/train/city0/PE-AR-7382-157_2_leftImg8bit  --dataset cityscapes --model deeplabv3plus_mobilenet --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --save_val_results_to test_results
 ```
 
 Image folder:
 ```bash
-python predict.py --input datasets/data/cityscapes/leftImg8bit/train/bremen  --dataset cityscapes --model deeplabv3plus_mobilenet --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --save_val_results_to test_results
+python predict.py --input datasets/data/eMARG/leftImg8bit/train/city0  --dataset cityscapes --model deeplabv3plus_mobilenet --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --save_val_results_to test_results
 ```
+
 
 ## Results
 
-### 1. Performance on Cityscapes (19 classes, 1024 x 2048)
+### 1. Performance on eMARG (6 classes, 512 x 384)
 
 Training: 768x768 random crop  
-validation: 1024x2048
+validation: 512x384
 
-|  Model          | Batch Size  | FLOPs  | train/val OS   |  mIoU        | Dropbox  |  Tencent Weiyun  |
+|  Model          | Batch Size  | mIoU  | Overall_Accuracy   |  Mean_Accuracy |lr |checkpoint_link   |
 | :--------        | :-------------: | :----:   | :-----------: | :--------: | :--------: |  :----:   |
-| DeepLabV3Plus-MobileNet   | 16      |  135G      |  16/16   |  0.721  |    [Download](https://www.dropbox.com/s/753ojyvsh3vdjol/best_deeplabv3plus_mobilenet_cityscapes_os16.pth?dl=0) | [Download](https://share.weiyun.com/aSKjdpbL) 
-| DeepLabV3Plus-ResNet101   | 16      |  N/A      |  16/16   |  0.762  |    [Download](https://drive.google.com/file/d/1t7TC8mxQaFECt4jutdq_NMnWxdm6B-Nb/view?usp=sharing) | [Comming Soon]()
+| DeepLabV3Plus-MobileNet   | 4      |  0.558     |  0.896   |  0.694  |  0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
+| DeepLabV3Plus-ResNet101   | 4      |  0.600   |  0.854   |  0.741  | 0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
 
-
-#### GradCAM Results on EMarg (DeepLabv3Plus-MobileNet/ResNet-101)
-![PE-BR-80437-23_1](https://github.com/shubhampundhir/dlv3plus_binaryClf_VideoAnalytics/assets/56575094/e84fa921-99b7-4862-86cf-bb68889e630b)
-![PE-BR-80437-23_1_overlay](https://github.com/shubhampundhir/dlv3plus_binaryClf_VideoAnalytics/assets/56575094/7465a495-8bf7-4aa3-af70-cdfd778923f5)
-![PE-GJ-80847-10_2](https://github.com/shubhampundhir/dlv3plus_binaryClf_VideoAnalytics/assets/56575094/61ff226b-950a-462e-830a-17a97088ff30)
-![PE-GJ-80847-10_2_overlay](https://github.com/shubhampundhir/dlv3plus_binaryClf_VideoAnalytics/assets/56575094/6af0e835-712d-4099-86c0-498c57556292)
+#### GradCAM Results on eMARG (DeepLabv3Plus-MobileNet/ResNet-101)
 
 
 
-## Cityscapes
+## eMARG Dataset
+### 1. Requirements
 
-### 1. Download cityscapes and extract it to 'datasets/data/cityscapes'
+```bash
+pip install -r requirements.txt
+```
+
+
+### 2. Download eMARG and extract it likewise Cityscapes dataset in this format 'datasets/data/cityscapes'
 
 ```
 /datasets
     /data
-        /cityscapes
+        /eMARG
             /gtFine
             /leftImg8bit
 ```
 
-### 2. Train your model on Cityscapes
+### 3. Train your model on eMARG likewise Cityscapes.
 
 ```bash
-python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/cityscapes 
+python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/eMARG
+python main.py --model deeplabv3plus_resnet101 --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/eMARG 
+```
+
+#### 4. Testing
+
+Results will be saved at ./results.
+
+```bash
+python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --gpu_id 0 --year 2012_aug --crop_val --lr 0.01 --crop_size 513 --batch_size 16 --output_stride 16 --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --test_only --save_val_results
+python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --gpu_id 0 --year 2012_aug --crop_val --lr 0.01 --crop_size 513 --batch_size 16 --output_stride 16 --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --test_only --save_val_results
+
 ```
 
 ## Reference
@@ -100,3 +106,4 @@ python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis
 [1] [Rethinking Atrous Convolution for Semantic Image Segmentation](https://arxiv.org/abs/1706.05587)
 
 [2] [Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation](https://arxiv.org/abs/1802.02611)
+
