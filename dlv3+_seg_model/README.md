@@ -56,18 +56,7 @@ validation: 512x384
 
 #### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
-<div>
-<img src="![PE-KL-36376-38_1_leftImg8bit_image](https://github.com/shubhampundhir/eMARG_iiitd/assets/56575094/b22774b5-1516-48b0-96bd-a551de52687c)
-"   width="45%">
 
-<img src="![PE-KL-36376-38_1_leftImg8bit_overlay](https://github.com/shubhampundhir/eMARG_iiitd/assets/56575094/62b0d75f-a3a4-4f06-b3fe-7f8e3cbd348d)
-"  width="45%">
-</div>
-
-<div>
-<img src="samples/city_6_target.png"   width="45%">
-<img src="samples/city_6_overlay.png"  width="45%">
-</div>
 
 
 ## eMARG Dataset
