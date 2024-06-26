@@ -61,10 +61,10 @@ validation: 512x384
 ### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
 <p float="left">
-  <img src="images/PE-GJ-28373-102_2_leftImg8bit_image.png" alt="Image" width="300" />
-  <img src="images/PE-GJ-28373-102_2_leftImg8bit_overlay.png" alt="Overlay" width="300" /> 
-  <img src="images/PE-GJ-28373-102_2_leftImg8bit_pred.png" alt="Prediction" width="300" />
-  <img src="images/PE-GJ-28373-102_2_leftImg8bit_target.png" alt="Target" width="300" />
+  <img src="images/PE-GJ-28373-84_2_leftImg8bit_image.png" alt="Image" width="300" />
+  <img src="images/PE-GJ-28373-84_2_leftImg8bit_overlay.png" alt="Overlay" width="300" /> 
+  <img src="images/PE-GJ-28373-84_2_leftImg8bit_pred.png" alt="Prediction" width="300" />
+  <img src="images/PE-GJ-28373-84_2_leftImg8bit_target.png" alt="Target" width="300" />
   
 </p>
 
