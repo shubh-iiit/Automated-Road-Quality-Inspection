@@ -30,13 +30,7 @@ colorized_preds = val_dst.decode_target(preds).astype('uint8') # To RGB images, 
 colorized_preds = Image.fromarray(colorized_preds[0]) # to PIL Image
 ```
 
-### 4. Atrous Separable Convolution
-
-**Note**: pre-trained models in this repo **do not** use Seperable Conv.
-
-Atrous Separable Convolution is supported in this repo. We provide a simple tool ``network.convert_to_separable_conv`` to convert ``nn.Conv2d`` to ``AtrousSeparableConvolution``. **Please run main.py with '--separable_conv' if it is required**. See 'main.py' and 'network/_deeplab.py' for more details. 
-
-### 5. Prediction
+### 4. Prediction
 Single image:
 ```bash
 python predict.py --input datasets/data/cityscapes/leftImg8bit/train/bremen/bremen_000000_000019_leftImg8bit.png  --dataset cityscapes --model deeplabv3plus_mobilenet --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --save_val_results_to test_results
@@ -49,54 +43,16 @@ python predict.py --input datasets/data/cityscapes/leftImg8bit/train/bremen  --d
 
 ## Results
 
-### 1. Performance on Pascal VOC2012 Aug (21 classes, 513 x 513)
-
-Training: 513x513 random crop  
-validation: 513x513 center crop
-
-|  Model          | Batch Size  | FLOPs  | train/val OS   |  mIoU        | Dropbox  | Tencent Weiyun  | 
-| :--------        | :-------------: | :----:   | :-----------: | :--------: | :--------: | :----:   |
-| DeepLabV3-MobileNet       | 16      |  6.0G      |   16/16  |  0.701     |    [Download](https://www.dropbox.com/s/uhksxwfcim3nkpo/best_deeplabv3_mobilenet_voc_os16.pth?dl=0)       | [Download](https://share.weiyun.com/A4ubD1DD) |
-| DeepLabV3-ResNet50         | 16      |  51.4G     |  16/16   |  0.769     |    [Download](https://www.dropbox.com/s/3eag5ojccwiexkq/best_deeplabv3_resnet50_voc_os16.pth?dl=0) | [Download](https://share.weiyun.com/33eLjnVL) |
-| DeepLabV3-ResNet101         | 16      |  72.1G     |  16/16   |  0.773     |    [Download](https://www.dropbox.com/s/vtenndnsrnh4068/best_deeplabv3_resnet101_voc_os16.pth?dl=0)       | [Download](https://share.weiyun.com/iCkzATAw)  |
-| DeepLabV3Plus-MobileNet   | 16      |  17.0G      |  16/16   |  0.711    |    [Download](https://www.dropbox.com/s/0idrhwz6opaj7q4/best_deeplabv3plus_mobilenet_voc_os16.pth?dl=0)   | [Download](https://share.weiyun.com/djX6MDwM) |
-| DeepLabV3Plus-ResNet50    | 16      |   62.7G     |  16/16   |  0.772     |    [Download](https://www.dropbox.com/s/dgxyd3jkyz24voa/best_deeplabv3plus_resnet50_voc_os16.pth?dl=0)   | [Download](https://share.weiyun.com/uTM4i2jG) |
-| DeepLabV3Plus-ResNet101     | 16      |  83.4G     |  16/16   |  0.783     |    [Download](https://www.dropbox.com/s/bm3hxe7wmakaqc5/best_deeplabv3plus_resnet101_voc_os16.pth?dl=0)   | [Download](https://share.weiyun.com/UNPZr3dk) |
-
-
-### 2. Performance on Cityscapes (19 classes, 1024 x 2048)
+### 1. Performance on eMARG (6 classes, 512 x 384)
 
 Training: 768x768 random crop  
-validation: 1024x2048
+validation: 512x384
 
 |  Model          | Batch Size  | FLOPs  | train/val OS   |  mIoU        | Dropbox  |  Tencent Weiyun  |
 | :--------        | :-------------: | :----:   | :-----------: | :--------: | :--------: |  :----:   |
 | DeepLabV3Plus-MobileNet   | 16      |  135G      |  16/16   |  0.721  |    [Download](https://www.dropbox.com/s/753ojyvsh3vdjol/best_deeplabv3plus_mobilenet_cityscapes_os16.pth?dl=0) | [Download](https://share.weiyun.com/aSKjdpbL) 
 | DeepLabV3Plus-ResNet101   | 16      |  N/A      |  16/16   |  0.762  |    [Download](https://drive.google.com/file/d/1t7TC8mxQaFECt4jutdq_NMnWxdm6B-Nb/view?usp=sharing) | [Comming Soon]()
 
-
-#### Segmentation Results on Pascal VOC2012 (DeepLabv3Plus-MobileNet)
-
-<div>
-<img src="samples/1_image.png"   width="20%">
-<img src="samples/1_target.png"  width="20%">
-<img src="samples/1_pred.png"    width="20%">
-<img src="samples/1_overlay.png" width="20%">
-</div>
-
-<div>
-<img src="samples/23_image.png"   width="20%">
-<img src="samples/23_target.png"  width="20%">
-<img src="samples/23_pred.png"    width="20%">
-<img src="samples/23_overlay.png" width="20%">
-</div>
-
-<div>
-<img src="samples/114_image.png"   width="20%">
-<img src="samples/114_target.png"  width="20%">
-<img src="samples/114_pred.png"    width="20%">
-<img src="samples/114_overlay.png" width="20%">
-</div>
 
 #### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
@@ -203,9 +159,9 @@ Results will be saved at ./results.
 python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --gpu_id 0 --year 2012_aug --crop_val --lr 0.01 --crop_size 513 --batch_size 16 --output_stride 16 --ckpt checkpoints/best_deeplabv3plus_mobilenet_voc_os16.pth --test_only --save_val_results
 ```
 
-## Cityscapes
+## eMARG Dataset
 
-### 1. Download cityscapes and extract it to 'datasets/data/cityscapes'
+### 1. Download eMARG and extract it likewise Cityscapes dataset in this format 'datasets/data/cityscapes'
 
 ```
 /datasets
@@ -215,10 +171,18 @@ python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --g
             /leftImg8bit
 ```
 
-### 2. Train your model on Cityscapes
+### 2. Train your model on eMARG likewise Cityscapes.
 
 ```bash
 python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/cityscapes 
+```
+
+#### 3.4. Testing
+
+Results will be saved at ./results.
+
+```bash
+python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --gpu_id 0 --year 2012_aug --crop_val --lr 0.01 --crop_size 513 --batch_size 16 --output_stride 16 --ckpt checkpoints/best_deeplabv3plus_mobilenet_voc_os16.pth --test_only --save_val_results
 ```
 
 ## Reference
