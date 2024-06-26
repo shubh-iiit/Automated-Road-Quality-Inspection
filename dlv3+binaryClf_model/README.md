@@ -45,10 +45,10 @@ python predict.py --input datasets/data/eMARG/leftImg8bit/train/city0  --dataset
 Training: 768x768 random crop  
 validation: 512x384
 
-|  Model          | Batch Size  | mIoU  | Overall_Accuracy   |  Mean_Accuracy |lr |checkpoint_link   |
+|  Model          | Batch Size  | Accuracy  | Precision   |  Recall  |F1-score |checkpoint_link   |
 | :--------        | :-------------: | :----:   | :-----------: | :--------: | :--------: |  :----:   |
-| DeepLabV3Plus-MobileNet   | 4      |  0.558     |  0.896   |  0.694  |  0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
-| DeepLabV3Plus-ResNet101   | 4      |  0.600   |  0.854   |  0.741  | 0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
+| DeepLabV3Plus-ResNet101    | 4    | 0.884     |  0.8618 |  0.915  |  0.887 | [Download](https://drive.google.com/file/d/1G5hRKOnwDCcLVnX-Sgnxz4bzsndWNxKV/view?usp=drive_link)
+| DeepLabV3Plus-MobileNet  |   8   |  0.869   |  0.841   |  0.908  | 0.874 | [Download](https://drive.google.com/file/d/1G5hRKOnwDCcLVnX-Sgnxz4bzsndWNxKV/view?usp=drive_link)
 
 ## GradCAM Results on eMARG (DeepLabv3Plus-MobileNet/ResNet-101)
 
