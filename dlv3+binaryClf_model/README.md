@@ -66,7 +66,7 @@ validation: 512x384
 
 <p float="left">
   <img src="gradcam_results/PE-GJ-84921-20_2.jpg" alt="Image" width="300" />
-  <img src="dlv3+binaryClf_model/gradcam_results/PE-GJ-84921-20_2_overlay.jpg" width="300" /> 
+  <img src="gradcam_results/PE-GJ-84921-20_2_overlay.jpg" width="300" /> 
   <img src="gradcam_results/PE-GJ-85702-59_2.jpg" width="300" />
   <img src="gradcam_results/PE-GJ-85702-59_2_overlay.jpg" width="300" />
   
