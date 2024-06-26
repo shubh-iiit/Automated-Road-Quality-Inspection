@@ -1,6 +1,6 @@
 # "eMARG" Automatic Road Quality Inspection
 
-We have used DeepLabv3+ semantic segmentation model trained on eMARG 15k images(Good/Bad).
+We have used DeepLabv3+ semantic segmentation model trained on eMARG-15k images(Good/Bad).
 
 ## Quick Start 
 
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 ```
 /datasets
     /data
-        /cityscapes
+        /eMARG
             /gtFine
             /leftImg8bit
 ```
@@ -87,7 +87,8 @@ pip install -r requirements.txt
 ### 3. Train your model on eMARG likewise Cityscapes.
 
 ```bash
-python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/eMARG 
+python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/eMARG
+python main.py --model deeplabv3plus_resnet101 --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/eMARG 
 ```
 
 #### 4. Testing
@@ -95,7 +96,9 @@ python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis
 Results will be saved at ./results.
 
 ```bash
-python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --gpu_id 0 --year 2012_aug --crop_val --lr 0.01 --crop_size 513 --batch_size 16 --output_stride 16 --ckpt checkpoints/best_deeplabv3plus_mobilenet_voc_os16.pth --test_only --save_val_results
+python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --gpu_id 0 --year 2012_aug --crop_val --lr 0.01 --crop_size 513 --batch_size 16 --output_stride 16 --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --test_only --save_val_results
+python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --gpu_id 0 --year 2012_aug --crop_val --lr 0.01 --crop_size 513 --batch_size 16 --output_stride 16 --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --test_only --save_val_results
+
 ```
 
 ## Reference
