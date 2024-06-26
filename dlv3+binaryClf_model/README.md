@@ -4,7 +4,10 @@ We have used Segmentation Backbone of DeepLabv3+ model pre-trained on eMARG-15k(
 
 ## Quick Start 
 ## DeeplabV3+ extended for binary classification
-![binClfmodel](https://github.com/shubhampundhir/dlv3plus_binaryClf_VideoAnalytics/assets/56575094/dfd0a6c0-66b1-4d09-b7c6-d2b7f7b81676)
+<p float="left">
+ <img src="BinaryClf_model/binary_clf.png" alt="Image" width="600" />
+  
+</p>
 
 
 
