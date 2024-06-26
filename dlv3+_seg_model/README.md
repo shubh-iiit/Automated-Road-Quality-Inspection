@@ -6,8 +6,11 @@ We have used DeepLabv3+ semantic segmentation model trained on eMARG-15k images(
 
 ### 1. Available Architectures
 Specify the model architecture with '--model ARCH_NAME' and set the output stride using '--output_stride OUTPUT_STRIDE'.
- <img src="seg_model/seg_model.png" alt="Image" width="300" />
 
+<p float="left">
+ <img src="seg_model/seg_model.png" alt="Image" width="300" />
+  
+</p>
 
 | DeepLabV3    |  DeepLabV3+        |
 | :---: | :---:     |
