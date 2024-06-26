@@ -10,10 +10,6 @@ We have used Segmentation Backbone of DeepLabv3+ model pre-trained on eMARG-15k(
 </p>
 
 
-
-### 1. Available Architectures
-Specify the model architecture with '--model ARCH_NAME' and set the output stride using '--output_stride OUTPUT_STRIDE'.
-
 | DeepLabV3    |  DeepLabV3+        |
 | :---: | :---:     |
 |deeplabv3_resnet50|deeplabv3plus_resnet50|
@@ -24,21 +20,13 @@ Specify the model architecture with '--model ARCH_NAME' and set the output strid
 
 ### All pretrained model checkpoints: [Drive](https://drive.google.com/drive/folders/1jA0iS7hq-AmFBtSn0Ne9DvIxcXCQBQGG?usp=drive_link)
 
-### 2. Load the pretrained model:
+### 1. Load the pretrained model:
 ```python
 model.load_state_dict( torch.load( CKPT_PATH )['model_state']  )
 ```
-### 3. Visualize segmentation outputs:
-```python
-outputs = model(images)
-preds = outputs.max(1)[1].detach().cpu().numpy()
-colorized_preds = val_dst.decode_target(preds).astype('uint8') # To RGB images, (N, H, W, 3), ranged 0~255, numpy array
-# Do whatever you like here with the colorized segmentation maps
-colorized_preds = Image.fromarray(colorized_preds[0]) # to PIL Image
-```
 
 
-### 4. Prediction
+### 2. Prediction
 Single image:
 ```bash
 python predict.py --input datasets/data/eMARG/leftImg8bit/train/city0/PE-AR-7382-157_2_leftImg8bit  --dataset cityscapes --model deeplabv3plus_mobilenet --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --save_val_results_to test_results
