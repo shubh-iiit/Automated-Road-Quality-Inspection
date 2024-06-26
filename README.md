@@ -60,24 +60,13 @@ validation: 512x384
 
 ### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
-  <figure style="margin: 0 10px; text-align: center;">
-    <img src="images/PE-GJ-28373-84_2_leftImg8bit_image.png" alt="Image" style="width: 200px;" />
-    <figcaption>Image</figcaption>
-  </figure>
-  <figure style="margin: 0 10px; text-align: center;">
-    <img src="images/PE-GJ-28373-84_2_leftImg8bit_overlay.png" alt="Overlay" style="width: 200px;" />
-    <figcaption>Overlay</figcaption>
-  </figure>
-  <figure style="margin: 0 10px; text-align: center;">
-    <img src="images/PE-GJ-28373-84_2_leftImg8bit_pred.png" alt="Prediction" style="width: 200px;" />
-    <figcaption>Prediction</figcaption>
-  </figure>
-  <figure style="margin: 0 10px; text-align: center;">
-    <img src="images/PE-GJ-28373-84_2_leftImg8bit_target.png" alt="Target" style="width: 200px;" />
-    <figcaption>Target</figcaption>
-  </figure>
-</div>
+<p float="left">
+  <img src="images/PE-GJ-28373-102_2_leftImg8bit_image.png" alt="Image" width="300" />
+  <img src="images/PE-GJ-28373-102_2_leftImg8bit_overlay.png" alt="Overlay" width="300" /> 
+  <img src="images/PE-GJ-28373-102_2_leftImg8bit_pred.png" alt="Prediction" width="300" />
+  <img src="images/PE-GJ-28373-102_2_leftImg8bit_target.png" alt="Target" width="300" />
+  
+</p>
 
 
 ## II. Image Classification
