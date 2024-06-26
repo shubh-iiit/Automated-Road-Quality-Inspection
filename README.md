@@ -60,7 +60,7 @@ validation: 512x384
 
 #### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
   <figure style="margin: 0 10px; text-align: center;">
     <img src="images/PE-GJ-28373-84_2_leftImg8bit_image.png" alt="Image" style="width: 200px;" />
     <figcaption>Image</figcaption>
@@ -78,6 +78,7 @@ validation: 512x384
     <figcaption>Target</figcaption>
   </figure>
 </div>
+
 
 ## II. Image Classification
 We have used Segmentation Backbone of DeepLabv3+ model pre-trained on eMARG-15k(Good/Bad) and extended it for Binary Classification by adding simple Conv + FC layer combination. 
