@@ -1,6 +1,6 @@
 # DeepLabV3Plus-Pytorch
 
-DeepLabv3, DeepLabv3+ with pretrained models for Cityscapes.
+We have used Segmentation Backbone of DeepLabv3+ model pre-trained on eMARG-15k(Good/Bad) and extended it for Binary Classification by adding simple Conv + FC layer combination layers. 
 
 ## Quick Start 
 ## DeeplabV3+ extended for binary classification
