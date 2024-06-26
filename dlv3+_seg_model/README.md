@@ -56,6 +56,12 @@ validation: 512x384
 
 #### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
+## Images
+
+<p float="left">
+  <img src="images/image1.png" alt="Image 1" width="300" />
+  <img src="images/image2.png" alt="Image 2" width="300" /> 
+</p>
 
 
 
