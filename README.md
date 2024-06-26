@@ -60,13 +60,24 @@ validation: 512x384
 
 #### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
 
-<p float="left">
-  <img src="images/PE-GJ-28373-84_2_leftImg8bit_image.png" alt="Image" width="300" />
-  <img src="images/PE-GJ-28373-84_2_leftImg8bit_overlay.png" alt="Overlay" width="300" /> 
-  <img src="images/PE-GJ-28373-84_2_leftImg8bit_pred.png" alt="Prediction" width="300" />
-  <img src="images/PE-GJ-28373-84_2_leftImg8bit_target.png" alt="Target" width="300" />
-  
-</p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <figure style="margin: 0 10px;">
+    <img src="images/PE-GJ-28373-84_2_leftImg8bit_image.png" alt="Image" style="width: 100%;" />
+    <figcaption style="text-align: center;">Image</figcaption>
+  </figure>
+  <figure style="margin: 0 10px;">
+    <img src="images/PE-GJ-28373-84_2_leftImg8bit_overlay.png" alt="Overlay" style="width: 100%;" />
+    <figcaption style="text-align: center;">Overlay</figcaption>
+  </figure>
+  <figure style="margin: 0 10px;">
+    <img src="images/PE-GJ-28373-84_2_leftImg8bit_pred.png" alt="Prediction" style="width: 100%;" />
+    <figcaption style="text-align: center;">Prediction</figcaption>
+  </figure>
+  <figure style="margin: 0 10px;">
+    <img src="images/PE-GJ-28373-84_2_leftImg8bit_target.png" alt="Target" style="width: 100%;" />
+    <figcaption style="text-align: center;">Target</figcaption>
+  </figure>
+</div>
 
 ## II. Image Classification
 We have used Segmentation Backbone of DeepLabv3+ model pre-trained on eMARG-15k(Good/Bad) and extended it for Binary Classification by adding simple Conv + FC layer combination. 
