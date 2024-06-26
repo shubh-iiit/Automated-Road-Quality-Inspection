@@ -1,6 +1,6 @@
-# DeepLabv3Plus-Pytorch
+# "eMARG" Automatic Road Quality Inspection
 
-DeepLabv3, DeepLabv3+ with pretrained models for Pascal VOC & Cityscapes.
+We have used DeepLabv3+ semantic segmentation model trained in eMARG 15k images(Good/Bad).
 
 ## Quick Start 
 
@@ -15,9 +15,7 @@ Specify the model architecture with '--model ARCH_NAME' and set the output strid
 |deeplabv3_hrnetv2_48 | deeplabv3plus_hrnetv2_48 |
 |deeplabv3_hrnetv2_32 | deeplabv3plus_hrnetv2_32 |
 
-All pretrained models: [Dropbox](https://www.dropbox.com/sh/w3z9z8lqpi8b2w7/AAB0vkl4F5vy6HdIhmRCTKHSa?dl=0), [Tencent Weiyun](https://share.weiyun.com/qqx78Pv5)
-
-Note: The HRNet backbone was contributed by @timothylimyl. A pre-trained backbone is available at [google drive](https://drive.google.com/file/d/1NxCK7Zgn5PmeS7W1jYLt5J9E0RRZ2oyF/view?usp=sharing).
+### All pretrained model checkpoints: [Drive](https://drive.google.com/drive/folders/1jA0iS7hq-AmFBtSn0Ne9DvIxcXCQBQGG?usp=drive_link)
 
 ### 2. Load the pretrained model:
 ```python
