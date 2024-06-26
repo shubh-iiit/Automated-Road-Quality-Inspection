@@ -50,8 +50,8 @@ validation: 512x384
 
 |  Model          | Batch Size  | mIoU  | Overall_Accuracy   |  Mean_Accuracy |lr |checkpoint_link   |
 | :--------        | :-------------: | :----:   | :-----------: | :--------: | :--------: |  :----:   |
-| DeepLabV3Plus-MobileNet   | 4      |  0.558     |  0.896   |  0.694  |  0.01  [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
-| DeepLabV3Plus-ResNet101   | 4      |  0.600   |  0.854   |  0.741  | 0.01  [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
+| DeepLabV3Plus-MobileNet   | 4      |  0.558     |  0.896   |  0.694  |  0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
+| DeepLabV3Plus-ResNet101   | 4      |  0.600   |  0.854   |  0.741  | 0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
 
 
 #### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
