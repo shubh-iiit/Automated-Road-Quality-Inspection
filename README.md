@@ -33,8 +33,23 @@ colorized_preds = val_dst.decode_target(preds).astype('uint8') # To RGB images, 
 # Do whatever you like here with the colorized segmentation maps
 colorized_preds = Image.fromarray(colorized_preds[0]) # to PIL Image
 ```
+### 4. Train your model on eMARG likewise Cityscapes.
 
-### 4. Prediction
+```bash
+python main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/eMARG
+python main.py --model deeplabv3plus_resnet101 --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/eMARG 
+```
+
+#### 5. Testing
+
+Results will be saved at ./results.
+
+```bash
+python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --gpu_id 0 --year 2012_aug --crop_val --lr 0.01 --crop_size 513 --batch_size 16 --output_stride 16 --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --test_only --save_val_results
+python main.py --model deeplabv3plus_mobilenet --enable_vis --vis_port 28333 --gpu_id 0 --year 2012_aug --crop_val --lr 0.01 --crop_size 513 --batch_size 16 --output_stride 16 --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --test_only --save_val_results
+
+```
+### 6. Prediction
 Single image:
 ```bash
 python predict.py --input datasets/data/eMARG/leftImg8bit/train/city0/PE-AR-7382-157_2_leftImg8bit  --dataset cityscapes --model deeplabv3plus_mobilenet --ckpt checkpoints/best_deeplabv3plus_mobilenet_cityscapes_os16.pth --save_val_results_to test_results
@@ -147,14 +162,7 @@ validation: 512x384
 </p>
 
 ## eMARG Dataset
-### 1. Requirements
-
-```bash
-pip install -r requirements.txt
-```
-
-
-### 2. Download eMARG and extract it likewise Cityscapes dataset in this format 'datasets/data/cityscapes'
+### 1. Download eMARG and extract it likewise Cityscapes dataset in this format 'datasets/data/cityscapes'
 
 ```
 /datasets
@@ -162,6 +170,11 @@ pip install -r requirements.txt
         /eMARG
             /gtFine
             /leftImg8bit
+```
+### 2. Requirements
+
+```bash
+pip install -r requirements.txt
 ```
 
 ## Reference
