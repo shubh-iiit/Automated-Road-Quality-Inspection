@@ -1,4 +1,4 @@
-# "eMARG" Automatic Road Quality Inspection
+# I. Semantic Segmentation
 
 We have used DeepLabv3+ semantic segmentation model trained on eMARG-15k images(Good/Bad).
 
