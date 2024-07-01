@@ -73,7 +73,7 @@ validation: 512x384
 | DeepLabV3Plus-ResNet101   | 4      |  0.600   |  0.854   |  0.741  | 0.01 | [Download](https://drive.google.com/file/d/1pAFgtqZe1otNwDeAOxZeKxy6Hjrdjhbs/view?usp=sharing)
 
 
-### Segmentation Results on Cityscapes (DeepLabv3Plus-MobileNet)
+### Segmentation Results on Cityscapes (DeepLabv3Plus-ResNet101)
 
 <p float="left">
   <img src="images/PE-GJ-28373-84_2_leftImg8bit_image.png" alt="Image" width="300" />
