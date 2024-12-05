@@ -1,4 +1,4 @@
-# "eMARG" Automatic Road Quality Inspection
+# "eMARG" Automated Road Quality Inspection by Ministry of Rural Development(MoRD), Govt. of India
 ## I. Semantic Segmentation
 We have used DeepLabv3+ semantic segmentation model trained on eMARG-15k images(Good/Bad).
 
